@@ -4,10 +4,8 @@ using namespace std;
 int main() {
     cin.tie(nullptr)->sync_with_stdio(false);
     string s; cin >> s;
-    int i = 0, j = s.size();
-    while (i < j and s[i] != '|') ++i;
-    while (j > i and s[j - 1] != '|') --j;
-    s.erase(begin(s) + i, begin(s) + j);
+    int i = s.find('|'), j = s.rfind('|');
+    s.erase(begin(s) + i, begin(s) + j + 1);
     cout << s << '\n';
     return 0;
 }
