@@ -1,4 +1,5 @@
 #include <bits/stdc++.h>
+#include <atcoder/math>
 
 using i64 = long long;
 using u64 = unsigned long long;
@@ -17,23 +18,14 @@ int main() {
         if (vis[i]) continue;
         int j = i;
         std::vector<int> a;
-        do {
-            a.push_back(p[j]);
+        while (!vis[j]) {
+            a.push_back(j);
             vis[j] = 1;
             j = p[j];
-        } while (j != i);
-        for (auto &x : a)
-            std::cout << x << " ";
-        std::cout << '\n';
-        std::rotate(a.begin(), a.begin() + k % a.size(), a.end());
-        for (auto &x : a)
-            std::cout << x << " ";
-        std::cout << '\n';
-        j = i;
-        for (auto &x : a) {
-            res[j] = a[j];
-            j = p[j];
-        }
+        };
+        int shift = atcoder::pow_mod(2, k, a.size());
+        for (int j = 0; j < a.size(); ++j)
+            res[a[j]] = a[(j + shift) % a.size()];
     }
     for (int i = 1; i <= n; ++i)
         std::cout << res[i] << " \n"[i == n];

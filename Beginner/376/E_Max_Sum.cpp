@@ -12,7 +12,7 @@ int solve() {
     for (auto &x : b) std::cin >> x;
     std::vector<int> ord(n);
     std::iota(ord.begin(), ord.end(), 0);
-    std::ranges::sort(ord, {}, [&](int i) { return a[i];});
+    std::ranges::sort(ord, {}, [&](int i) {return a[i];});
     std::priority_queue<int> pq;
     i64 res = 1e18, sum = 0;
     for (auto &i : ord) {
@@ -25,7 +25,6 @@ int solve() {
         if (pq.size() == k) {
             res = std::min(res, sum * a[i]);
         }
-        
     }    
     std::cout << res << '\n';
     return 0;
