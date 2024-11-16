@@ -1,1 +1,0 @@
-{"name":"Local: test","url":"/Users/route101/ICPC/AtCoder/test.py","tests":[{"id":1731157397445,"input":"3\n379","output":"514"},{"id":1731157405666,"input":"30\n314159265358979323846264338327","output":"369673254065355789035427227741"}],"interactive":false,"memoryLimit":1024,"timeLimit":3000,"srcPath":"/Users/route101/ICPC/AtCoder/test.py","group":"local","local":true}
