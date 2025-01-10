@@ -1,4 +1,4 @@
-
+此仓库暂时封存，从 [ABC386](https://atcoder.jp/contests/abc386) 起，停止算法竞赛的活动，不再参与 AtCoder 的比赛，期待早日重启……
 
 
 ## ABC377
